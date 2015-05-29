@@ -1,0 +1,110 @@
+
+*{
+	outline: none;
+	box-sizing:border-box;
+}
+
+body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #eee;
+  overflow-y: auto;
+  padding-top: 110px;
+}
+
+
+div.mask.show{
+	display: block;
+}
+
+div.mask{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 1;
+	display: none;
+}
+
+div.center{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -200px;
+	margin-left: -400px;
+	height: 400px;
+	width: 800px;
+	left: 50%;
+	background-color: #FFF;
+}
+
+#container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  float: left;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  height: 200px;
+  width: 200px;  
+  background-color: #fff;
+  box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.1);
+  transition: ease-in-out all 0.5s;
+}
+
+img:hover{
+	background-color: #555;
+}
+
+div.album{
+	cursor: pointer;
+}
+
+
+
+form{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	height: 100px;
+	background-color: #EEE;
+}
+
+div#centerProcura{
+	margin: 0 auto;
+	height: 50px;
+	width: 400px;
+	background-color: #FFF;
+	margin-top: 25px;
+}
+
+input#inputArtista{
+	float: left;	
+	height: 100%;
+	width: 250px;
+	background:none;
+	border: none;
+	padding-left: 20px;
+}
+
+input#botaoBuscar{
+	float: right;
+	height: 100%;
+	width: 150px;
+	color: #FFF;
+	background:none;
+	border: none;
+	background-color: #45B5C8;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
