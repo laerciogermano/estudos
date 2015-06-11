@@ -2,12 +2,47 @@
 <head>
 	<title>Iniciando com o Angular.js</title>
 	<meta charset='utf-8' />
-	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
 </head>
 <body ng-controller='controller1'>
 
-	{{message}}
+	<!-- 
+		<form action='/teste' method='post'>
+			<input name='vencedor' type='text' />
+			<input name='nomealbum' type='text' />
+			<input name='nomeartista' type='text' />
+			<input type='submit' />
+		</form>
+ 	-->
+
+ 	<form ng-submit='submit()'>
+		<input ng-model='objSubmit.nome' placeholder='Nome' />
+		<input ng-model='objSubmit.ano' placeholder='Ano'/>
+		<input type='submit' />
+	</form>
+
+	<form ng-submit='listarPorNome()'>
+		<input type='text' placeholder='nome' ng-model='objProcurar.nome'/>
+		<input type='submit' value='Listar por nome' />
+		<input type='button' value='Listar todos' ng-click='listarTodos()' />
+	</form>
+
+ 	<table border='1'>
+ 		<tr>
+ 			<th>Nome</th>
+ 			<th>Ano</th>
+ 			<th>Remover</th>
+ 		</tr>
+ 		<tr ng-repeat='album in albuns'>
+ 			<td>{{album.nome}}</td>
+ 			<td>{{album.ano}}</td>
+ 			<td>
+ 				<button ng-click='removerPorNome(album.nome)'>Remover</button>
+ 			</td>
+ 		</tr>
+ 	</table>
+
+	
 
 	<script type="text/javascript" src='/static/js/angular.min.js'></script>
 	<script type="text/javascript" src='/static/js/app.js'></script>
