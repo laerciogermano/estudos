@@ -20,4 +20,5 @@ Storage.prototype.getAll = function(){
 	return this.albuns;
 }
 
+
 module.exports = new Storage();
